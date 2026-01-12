@@ -1,4 +1,4 @@
-import { EllipsisVertical, ShoppingCart, UserIcon } from "lucide-react";
+import { EllipsisVertical, ShoppingCart } from "lucide-react";
 import { Button } from "../../button";
 import Link from "next/link";
 import ModeToggle from "./ModeToggle";
@@ -9,6 +9,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "../../sheet";
+import UserMenu from "./UserMenu";
 
 export default function HeaderMenu() {
   return (
@@ -20,11 +21,7 @@ export default function HeaderMenu() {
             <ShoppingCart /> Cart
           </Link>
         </Button>
-        <Button asChild>
-          <Link href="/sign-in">
-            <UserIcon /> Sign In
-          </Link>
-        </Button>
+        <UserMenu />
       </nav>
       <nav className="md:hidden">
         <Sheet>
@@ -39,11 +36,7 @@ export default function HeaderMenu() {
                 <ShoppingCart /> Cart
               </Link>
             </Button>
-            <Button asChild>
-              <Link href="/sign-in">
-                <UserIcon /> Sign In
-              </Link>
-            </Button>
+            <UserMenu />
             <SheetDescription></SheetDescription>
           </SheetContent>
         </Sheet>

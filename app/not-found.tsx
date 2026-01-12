@@ -22,7 +22,7 @@ export default function NotFound() {
         <p className="text-destructive">Could not find requested page</p>
         <Button
           variant="outline"
-          className="mt-4 ml-2"
+          className="mt-4 ml-2 cursor-pointer"
           onClick={() => router.push("/")}
         >
           Back to Home
